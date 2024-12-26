@@ -15,6 +15,12 @@ namespace ApiGestaoLeads.Repositorio
             this._contexto = contexto;
         }
 
+        public ContextoBancoDadosApiGestaoLeads GetContexto()
+        {
+
+            return this._contexto;
+        }
+
         public async Task<Lead> CadastrarLead(LeadDTOCadastrarEditar leadDTOCadastrarEditar)
         {
             Lead lead = new Lead();
@@ -30,33 +36,7 @@ namespace ApiGestaoLeads.Repositorio
             lead.NumeroDocumento = leadDTOCadastrarEditar.NumeroDocumento;
             lead.TipoDocumento = leadDTOCadastrarEditar.TipoDocumento;
             lead.ConjugueId = leadDTOCadastrarEditar.ConjugueDTO.Id;
-
-            List<Contato> contatosLead = new List<Contato>();
-
-            leadDTOCadastrarEditar.ContatosDTO.ForEach(contatoDTO =>
-            {
-                Contato contato = new Contato();
-                contato.Id = contatoDTO.Id;
-                contato.DescricaoContato = contatoDTO.DescricaoContato;
-                contato.Ativo = contatoDTO.Ativo;
-                contato.TipoContatoId = contatoDTO.TipoContatoId;
-
-                contatosLead.Add(contato);
-            });
-
-            lead.Contatos = contatosLead;
-
-            List<Endereco> enderecosLead = new List<Endereco>();
-
-            leadDTOCadastrarEditar.EnderecosDTO.ForEach(enderecoDTO =>
-            {
-                enderecosLead.Add(new Endereco()
-                {
-
-                });
-            });
-
-            lead.Enderecos = enderecosLead;
+            lead.Genero = leadDTOCadastrarEditar.Genero;
 
             await this._contexto.Leads.AddAsync(lead);
             await this._contexto.SaveChangesAsync();
@@ -73,13 +53,20 @@ namespace ApiGestaoLeads.Repositorio
         public async Task<List<Lead>> BuscarTodosLeads()
         {
 
-            return await this._contexto.Leads.ToListAsync();
+            return await this._contexto.Leads.Include(l => l.Contatos)
+                .Include(l => l.Enderecos)
+                .OrderBy(l => l.NomeCompleto)
+                .ToListAsync();
         }
 
         public async Task<Lead> BuscarLeadPeloId(int idLeadConsultar)
         {
 
-            return await this._contexto.Leads.FirstOrDefaultAsync(l => l.Id == idLeadConsultar);
+            return await this._contexto.Leads
+                .Include(l => l.Contatos)
+                .Include(l => l.Enderecos)
+                .AsSplitQuery()
+                .FirstOrDefaultAsync(l => l.Id == idLeadConsultar);
         }
 
         public async Task<Boolean> DeletarLead(int idLeadDeletar)
@@ -117,6 +104,23 @@ namespace ApiGestaoLeads.Repositorio
         {
 
             return await this._contexto.Leads.FirstOrDefaultAsync(l => l.NumeroDocumento.Equals(numeroDocumento.Trim()));
+        }
+
+        // registrar conjugue na base de dados
+        public async Task<Conjugue> CadastrarConjugue(ConjugueDTO conjugueDTO)
+        {
+            Conjugue conjugue = new Conjugue();
+            conjugue.NomeCompleto = conjugueDTO.NomeCompleto;
+            conjugue.Cpf = conjugueDTO.Cpf;
+            conjugue.Telefone = conjugueDTO.Telefone;
+            conjugue.DataNascimento = conjugueDTO.DataNascimento;
+            conjugue.Genero = conjugueDTO.Genero;
+            conjugue.Email = conjugueDTO.Email;
+
+            await this._contexto.Conjugues.AddAsync(conjugue);
+            await this._contexto.SaveChangesAsync();
+
+            return conjugue;
         }
 
     }

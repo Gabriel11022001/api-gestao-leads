@@ -4,6 +4,7 @@ using ApiGestaoLeads.Contexto;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiGestaoLeads.Migrations
 {
     [DbContext(typeof(ContextoBancoDadosApiGestaoLeads))]
-    partial class ContextoBancoDadosApiGestaoLeadsModelSnapshot : ModelSnapshot
+    [Migration("20241226145855_MigrationAdicionarColunaComplementoTabelaEnderecos")]
+    partial class MigrationAdicionarColunaComplementoTabelaEnderecos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

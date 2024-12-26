@@ -2,6 +2,7 @@
 using ApiGestaoLeads.DTO;
 using ApiGestaoLeads.Model;
 using ApiGestaoLeads.Repositorio;
+using ApiGestaoLeads.Utils;
 
 namespace ApiGestaoLeads.Servico
 {
@@ -12,6 +13,7 @@ namespace ApiGestaoLeads.Servico
         private ContatoRepositorio _contatoRepositorio;
         private TipoContatoRepositorio _tipoContatoRepositorio;
         private EnderecoRepositorio _enderecoRepositorio;
+        private IConverter<List<Lead>, List<LeadDTO>> _converterListaLeadListaLeadDTO;
 
         public LeadServico(ContextoBancoDadosApiGestaoLeads contexto)
         {
@@ -19,10 +21,13 @@ namespace ApiGestaoLeads.Servico
             this._contatoRepositorio = new ContatoRepositorio(contexto);
             this._tipoContatoRepositorio = new TipoContatoRepositorio(contexto);
             this._enderecoRepositorio = new EnderecoRepositorio(contexto);
+            this._converterListaLeadListaLeadDTO = new ConverterListaLeadsEmListaLeadsDTO();
         }
 
         public async Task<RespostaHttp<LeadDTOCadastrarEditar>> CadastrarLead(LeadDTOCadastrarEditar leadDTOCadastrarEditar)
         {
+            ContextoBancoDadosApiGestaoLeads contextoControleTransacao = this._leadRepositorio.GetContexto();
+            contextoControleTransacao.Database.BeginTransactionAsync();
 
             try
             {
@@ -69,29 +74,25 @@ namespace ApiGestaoLeads.Servico
                 Boolean tiposContatosValidos = true;
                 ContatoDTOCadastrarEditar contatoInvalido = null;
 
-                leadDTOCadastrarEditar.ContatosDTO.ForEach(async contatoDTO =>
+                foreach (ContatoDTOCadastrarEditar contatoDTO in leadDTOCadastrarEditar.ContatosDTO)
                 {
+
                     // validar se o tipo de contato é válido para todos os contatos informados
                     if (await this._tipoContatoRepositorio.BuscarTipoContatoPeloId(contatoDTO.TipoContatoId) is null)
-                    {              
+                    {
                         tiposContatosValidos = false;
                         contatoInvalido = contatoDTO;
-
-                        return;
                     }
-
-                    if (await this._contatoRepositorio.BuscarContatoPeloTipoEDescricao(
+                    else if (await this._contatoRepositorio.BuscarContatoPeloTipoEDescricao(
                         contatoDTO.TipoContatoId,
                         contatoDTO.DescricaoContato
                     ) is not null)
                     {
                         naoExistemContatosComMesmaDescricaoParaOutroLead = false;
-                        contatoInvalido = null;
-
-                        return;
+                        contatoInvalido = contatoDTO;
                     }
 
-                });
+                }
 
                 if (!tiposContatosValidos)
                 {
@@ -109,7 +110,7 @@ namespace ApiGestaoLeads.Servico
                 {
                     // cadastrar lead pessoa fisica
                     // validar se já existe outra pf cadastrada com o mesmo cpf
-                    if (this.ValidarSeJaExisteOutroLeadCadastradoMesmoCpf(leadDTOCadastrarEditar.Cnpj).Result)
+                    if (this.ValidarSeJaExisteOutroLeadCadastradoMesmoCpf(leadDTOCadastrarEditar.Cpf).Result)
                     {
 
                         return new RespostaHttp<LeadDTOCadastrarEditar>("Já existe outro lead cadastrado com esse mesmo cpf!", false, null);
@@ -122,24 +123,35 @@ namespace ApiGestaoLeads.Servico
                         return new RespostaHttp<LeadDTOCadastrarEditar>("Já existe outro lead cadastrado com o mesmo número de documento!", false, null);
                     }
 
+                    // persistir o conjugue na base de dados
+                    Conjugue conjugue = await this._leadRepositorio.CadastrarConjugue(leadDTOCadastrarEditar.ConjugueDTO);
+                    leadDTOCadastrarEditar.ConjugueDTO.Id = conjugue.Id;
+
                     // persistir o lead na base de dados
                     Lead leadCadastrado = await this._leadRepositorio.CadastrarLead(leadDTOCadastrarEditar);
-
+                    
                     // persistir os contatos do lead na base de dados
                     foreach (ContatoDTOCadastrarEditar contatoLeadDTOCadastrar in leadDTOCadastrarEditar.ContatosDTO)
                     {
                         contatoLeadDTOCadastrar.LeadId = leadCadastrado.Id;
 
-                        await this._contatoRepositorio.CadastrarContato(contatoLeadDTOCadastrar);
+                        Contato contato = await this._contatoRepositorio.CadastrarContato(contatoLeadDTOCadastrar);
+                        contatoLeadDTOCadastrar.Id = contato.Id;
                     }
 
                     // persistir os endereços do lead na base de dados
                     foreach (EnderecoDTO enderecoDTO in leadDTOCadastrarEditar.EnderecosDTO)
                     {
-                        enderecoDTO.LeadId = leadDTOCadastrarEditar.Id;
+                        enderecoDTO.LeadId = leadCadastrado.Id;
 
-                        await this._enderecoRepositorio.CadastrarEndereco(enderecoDTO);
+                        Endereco endereco = await this._enderecoRepositorio.CadastrarEndereco(enderecoDTO);
+                        enderecoDTO.Id = endereco.Id;
                     }
+
+                    leadDTOCadastrarEditar.Id = leadCadastrado.Id;
+
+                    // commitar a transação para persistir os dados efetivamente na base de dados
+                    contextoControleTransacao.Database.CommitTransactionAsync();
 
                     return new RespostaHttp<LeadDTOCadastrarEditar>("Lead cadastrado com sucesso!", true, leadDTOCadastrarEditar);
                 } else
@@ -153,9 +165,13 @@ namespace ApiGestaoLeads.Servico
             catch (Exception e)
             {
 
+                Console.WriteLine(e.StackTrace);
+
+                contextoControleTransacao.Database.RollbackTransactionAsync();
+
                 return new RespostaHttp<LeadDTOCadastrarEditar>()
                 {
-                    Mensagem = "Erro ao tentar-se cadastrar o lead!",
+                    Mensagem = "Erro ao tentar-se cadastrar o lead: " + e.Message,
                     Ok = false,
                     Retorno = null
                 };
@@ -180,6 +196,131 @@ namespace ApiGestaoLeads.Servico
         {
 
             return await this._leadRepositorio.BuscarLeadPeloNumeroDocumento(numeroDocumento) is not null;
+        }
+
+        public async Task<RespostaHttp<List<LeadDTO>>> BuscarTodosLeads()
+        {
+
+            try
+            {
+                var leads = await this._leadRepositorio.BuscarTodosLeads();
+
+                if (leads.Count == 0)
+                {
+
+                    return new RespostaHttp<List<LeadDTO>>()
+                    {
+                        Mensagem = "Não existem leads cadastrados na base de dados!",
+                        Ok = false,
+                        Retorno = new List<LeadDTO>()
+                    };
+                }
+
+                var leadsDTO = this._converterListaLeadListaLeadDTO.Converter(leads);
+
+                return new RespostaHttp<List<LeadDTO>>()
+                {
+                    Mensagem = "Leads encontrados com sucesso!",
+                    Ok = true,
+                    Retorno = leadsDTO
+                };
+            }
+            catch (Exception e)
+            {
+
+                return new RespostaHttp<List<LeadDTO>>()
+                {
+                    Mensagem = "Erro ao tentar-se consultar todos os leads!",
+                    Ok = false,
+                    Retorno = null
+                };
+            }
+
+        }
+
+        public async Task<RespostaHttp<LeadDTO>> BuscarLeadPeloId(int id)
+        {
+
+            try
+            {
+                var lead = await this._leadRepositorio.BuscarLeadPeloId(id);
+
+                if (lead is null)
+                {
+
+                    return new RespostaHttp<LeadDTO>("Não foi encontrado um lead com esse id!", false, null);
+                }
+
+                var leadDTO = new LeadDTO();
+                leadDTO.Id = lead.Id;
+                leadDTO.NomeCompleto = lead.NomeCompleto;
+                leadDTO.TipoPessoa = lead.TipoPessoa;
+                leadDTO.Cnpj = lead.Cnpj;
+                leadDTO.Cpf = lead.Cpf;
+                leadDTO.NomeMae = lead.NomeMae;
+                leadDTO.NomePai = lead.NomePai;
+                leadDTO.DataNascimento = lead.DataNascimento;
+                leadDTO.DataFundacao = lead.DataFundacao;
+                leadDTO.Genero = lead.Genero;
+                leadDTO.NumeroDocumento = lead.NumeroDocumento;
+                leadDTO.TipoDocumento = lead.TipoDocumento;
+                leadDTO.RazaoSocial = lead.RazaoSocial;
+
+                var enderecosDTO = new List<EnderecoDTO>();
+                var contatosDTO = new List<ContatoDTO>();
+
+                foreach (Endereco endereco in lead.Enderecos)
+                {
+                    EnderecoDTO enderecoDTO = new EnderecoDTO();
+                    enderecoDTO.Id = endereco.Id;
+                    enderecoDTO.Cep = endereco.Cep;
+                    enderecoDTO.Complemento = endereco.Complemento;
+                    enderecoDTO.Logradouro = endereco.Logradouro;
+                    enderecoDTO.Cidade = endereco.Cidade;
+                    enderecoDTO.Bairro = endereco.Bairro;
+                    enderecoDTO.Numero = endereco.Numero;
+                    enderecoDTO.Uf = endereco.Estado;
+
+                    enderecosDTO.Add(enderecoDTO);
+                }
+
+                foreach (Contato contato in lead.Contatos)
+                {
+                    ContatoDTO contatoDTO = new ContatoDTO();
+                    contatoDTO.Id = contato.Id;
+                    contatoDTO.Descricao = contato.DescricaoContato;
+                    contatoDTO.Ativo = contato.Ativo;
+
+                    TipoContato tipoContato = await this._tipoContatoRepositorio.BuscarTipoContatoPeloId(contato.TipoContatoId);
+
+                    if (tipoContato != null)
+                    {
+                        contatoDTO.TipoContatoDTO = new TipoContatoDTO()
+                        {
+                            Id = tipoContato.Id,
+                            Descricao = tipoContato.Descricao,
+                            Ativo = tipoContato.Ativo
+                        };
+                    }
+
+                    contatosDTO.Add(contatoDTO);
+                }
+
+                leadDTO.EnderecosDTO = enderecosDTO;
+                leadDTO.ContatosDTO = contatosDTO;
+
+                return new RespostaHttp<LeadDTO>("Lead encontrado com sucesso!", true, leadDTO);
+            }
+            catch (Exception e)
+            {
+
+                return new RespostaHttp<LeadDTO>(
+                    "Erro ao tentar-se consultar o lead pelo id: " + e.Message,
+                    false,
+                    null
+                );
+            }
+
         }
 
     }

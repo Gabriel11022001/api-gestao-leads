@@ -18,6 +18,7 @@ namespace ApiGestaoLeads.Controllers
             this._leadServico = new LeadServico(contexto);
         }
 
+        // cadastrar leads na base de dados
         [ HttpPost ]
         public async Task<ActionResult<RespostaHttp<LeadDTOCadastrarEditar>>> CadastrarLead(LeadDTOCadastrarEditar leadDTOCadastrarEditar)
         {
@@ -30,6 +31,42 @@ namespace ApiGestaoLeads.Controllers
             }
 
             return BadRequest(respostaCadastrarLead);
+        }
+
+        // consultar todos os leads cadastrados na base de dados
+        [ HttpGet ]
+        public async Task<ActionResult<RespostaHttp<List<LeadDTO>>>> BuscarTodosLeads()
+        {
+            RespostaHttp<List<LeadDTO>> respostaConsultarTodosLeads = await this._leadServico.BuscarTodosLeads();
+
+            if (respostaConsultarTodosLeads.Ok)
+            {
+
+                return Ok(respostaConsultarTodosLeads);
+            }
+
+            return BadRequest(respostaConsultarTodosLeads);
+        }
+
+        // buscar um lead pelo id
+        [ HttpGet("{idLead:int}") ]
+        public async Task<ActionResult<RespostaHttp<LeadDTO>>> BuscarLeadPeloId(int idLead)
+        {
+            RespostaHttp<LeadDTO> respostaConsultarLeadPeloId = await this._leadServico.BuscarLeadPeloId(idLead);
+
+            if (respostaConsultarLeadPeloId.Ok)
+            {
+
+                return Ok(respostaConsultarLeadPeloId);
+            }
+
+            if (respostaConsultarLeadPeloId.Mensagem.Equals("Não foi encontrado um lead com esse id!"))
+            {
+
+                return NotFound(respostaConsultarLeadPeloId);
+            }
+
+            return BadRequest(respostaConsultarLeadPeloId);
         }
 
     }

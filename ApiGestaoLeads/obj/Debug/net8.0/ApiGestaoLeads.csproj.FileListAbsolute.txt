@@ -169,4 +169,5 @@ C:\Users\Gabriel Rodrigues\Desktop\arquivos\MEUS_PROJETOS\api-gestao-leads\ApiGe
 C:\Users\Gabriel Rodrigues\Desktop\arquivos\MEUS_PROJETOS\api-gestao-leads\ApiGestaoLeads\ApiGestaoLeads\obj\Debug\net8.0\ApiGestaoLeads.pdb
 C:\Users\Gabriel Rodrigues\Desktop\arquivos\MEUS_PROJETOS\api-gestao-leads\ApiGestaoLeads\ApiGestaoLeads\obj\Debug\net8.0\ApiGestaoLeads.genruntimeconfig.cache
 C:\Users\Gabriel Rodrigues\Desktop\arquivos\MEUS_PROJETOS\api-gestao-leads\ApiGestaoLeads\ApiGestaoLeads\obj\Debug\net8.0\ref\ApiGestaoLeads.dll
+C:\Users\Gabriel Rodrigues\Desktop\arquivos\MEUS_PROJETOS\api-gestao-leads\ApiGestaoLeads\ApiGestaoLeads\obj\Debug\net8.0\ApiGestaoLeads.sourcelink.json
 C:\Users\Gabriel Rodrigues\Desktop\arquivos\MEUS_PROJETOS\api-gestao-leads\ApiGestaoLeads\ApiGestaoLeads\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
