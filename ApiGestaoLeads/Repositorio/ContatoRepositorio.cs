@@ -31,32 +31,51 @@ namespace ApiGestaoLeads.Repositorio
             return contato;
         }
 
-        public async Task<Contato> EditarContato(ContatoDTO contatoDTO)
+        public async Task<Contato> EditarContato(ContatoDTOCadastrarEditar contatoDTO)
         {
+            Contato contatoEditar = await this._contexto.Contatos.FindAsync(contatoDTO.Id);
 
-            return null;
+            contatoEditar.DescricaoContato = contatoDTO.DescricaoContato;
+            contatoEditar.Ativo = contatoDTO.Ativo;
+            contatoEditar.TipoContatoId = contatoDTO.TipoContatoId;
+            contatoEditar.LeadId = contatoDTO.LeadId;
+            contatoEditar.Id = contatoDTO.Id;
+
+            this._contexto.Entry(contatoEditar).State = EntityState.Modified;
+            await this._contexto.SaveChangesAsync();
+
+            return contatoEditar;
         }
 
         public async Task<List<Contato>> BuscarTodosContatos()
         {
 
-            return null;
+            return await this._contexto
+                .Contatos
+                .ToListAsync();
         }
 
         public async Task<Contato> BuscarContatoPeloId(int idContato)
         {
 
-            return null;
+            return await this._contexto.Contatos.FindAsync(idContato);
         }
 
         public async Task<List<Contato>> FiltrarContatosPelaDescricao(String descricaoContato)
         {
 
-            return null;
+            return await this._contexto
+                .Contatos
+                .Where(c => c.DescricaoContato.Contains(descricaoContato))
+                .ToListAsync();
         }
 
         public async Task<Boolean> DeletarContato(int idContatoDeletar)
         {
+            this._contexto.Contatos.Entry(await this._contexto.Contatos.FindAsync(idContatoDeletar))
+                .State = EntityState.Deleted;
+
+            await this._contexto.SaveChangesAsync();
 
             return true;
         }
@@ -68,6 +87,15 @@ namespace ApiGestaoLeads.Repositorio
                 .FirstOrDefaultAsync(c => c.TipoContatoId == idTipoContato && c.DescricaoContato.Equals(descricao));
 
             return contato;
+        }
+
+        public async Task<List<Contato>> BuscarContatosLead(int idLead)
+        {
+
+            return await this._contexto.Contatos
+                .Where(c => c.LeadId == idLead)
+                .Include(c => c.TipoContato)
+                .ToListAsync();
         }
 
     }

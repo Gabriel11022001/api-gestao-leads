@@ -1,5 +1,77 @@
 [
   {
+    "ContainingType": "ApiGestaoLeads.Controllers.ContatoController",
+    "Method": "CadastrarContato",
+    "RelativePath": "api/Contato",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contatoDTOCadastrarEditar",
+        "Type": "ApiGestaoLeads.DTO.ContatoDTOCadastrarEditar",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ApiGestaoLeads.Servico.RespostaHttp\u00601[[ApiGestaoLeads.DTO.ContatoDTOCadastrarEditar, ApiGestaoLeads, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApiGestaoLeads.Controllers.ContatoController",
+    "Method": "EditarContato",
+    "RelativePath": "api/Contato",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contatoDTOCadastrarEditar",
+        "Type": "ApiGestaoLeads.DTO.ContatoDTOCadastrarEditar",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ApiGestaoLeads.Servico.RespostaHttp\u00601[[ApiGestaoLeads.DTO.ContatoDTOCadastrarEditar, ApiGestaoLeads, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApiGestaoLeads.Controllers.ContatoController",
+    "Method": "BuscarTodosContatos",
+    "RelativePath": "api/Contato",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ApiGestaoLeads.Servico.RespostaHttp\u00601[[System.Collections.Generic.List\u00601[[ApiGestaoLeads.DTO.ContatoDTO, ApiGestaoLeads, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ApiGestaoLeads.Controllers.LeadsController",
     "Method": "CadastrarLead",
     "RelativePath": "api/Leads",
