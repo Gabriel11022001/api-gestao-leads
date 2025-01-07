@@ -59,5 +59,25 @@ namespace ApiGestaoLeads.Controllers
             return BadRequest(respostaListarTodosContatos);
         }
 
+        [ HttpGet("{id:int}") ]
+        public async Task<ActionResult<RespostaHttp<ContatoDTO>>> BuscarContatoPeloId(int id)
+        {
+            var respostaBuscarContatoPeloId = await this._contatoServico.BuscarContatoPeloId(id);
+
+            if (respostaBuscarContatoPeloId.Ok)
+            {
+
+                return Ok(respostaBuscarContatoPeloId);
+            }
+
+            if (respostaBuscarContatoPeloId.Mensagem.Equals("Não existe um contato cadastrado na base de dados com esse id!"))
+            {
+
+                return NotFound(respostaBuscarContatoPeloId);
+            }
+
+            return BadRequest(respostaBuscarContatoPeloId);
+        }
+
     }
 }

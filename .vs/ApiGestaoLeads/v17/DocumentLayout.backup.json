@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\controllers\\contatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\controllers\\contatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\servico\\contatoservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\servico\\contatoservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,24 +15,44 @@
       "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\repositorio\\contatorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\controllers\\contatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\controllers\\contatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\model\\contato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\model\\contato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\servico\\leadservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\servico\\leadservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\controllers\\leadscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\controllers\\leadscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\repositorio\\leadrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\repositorio\\leadrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\repositorio\\enderecorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\repositorio\\enderecorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\servico\\respostahttp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\servico\\respostahttp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\dto\\leaddtocadastrareditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\dto\\leaddtocadastrareditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\utils\\validagenero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\utils\\validagenero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\utils\\validacpf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\utils\\validacpf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\dto\\contatodtocadastrareditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\dto\\contatodtocadastrareditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\model\\contato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\model\\contato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\repositorio\\tipocontatorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,20 +71,8 @@
       "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\dto\\conjuguedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\dto\\contatodtocadastrareditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\dto\\contatodtocadastrareditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\dto\\contatodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\dto\\contatodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\controllers\\leadscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\controllers\\leadscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\repositorio\\enderecorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|solutionrelative:apigestaoleads\\repositorio\\enderecorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7FA322D-BEB9-45AF-9703-9BCECA192A6B}|ApiGestaoLeads\\ApiGestaoLeads.csproj|c:\\users\\gabriel rodrigues\\desktop\\arquivos\\meus_projetos\\api-gestao-leads\\apigestaoleads\\apigestaoleads\\migrations\\20241226145855_migrationadicionarcolunacomplementotabelaenderecos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,63 +126,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "LeadServico.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Servico\\LeadServico.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\Servico\\LeadServico.cs",
               "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Servico\\LeadServico.cs",
               "RelativeToolTip": "ApiGestaoLeads\\Servico\\LeadServico.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAcwEQBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIwBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T18:44:04.334Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ContatoDTOCadastrarEditar.cs",
-              "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\DTO\\ContatoDTOCadastrarEditar.cs",
-              "RelativeDocumentMoniker": "ApiGestaoLeads\\DTO\\ContatoDTOCadastrarEditar.cs",
-              "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\DTO\\ContatoDTOCadastrarEditar.cs",
-              "RelativeToolTip": "ApiGestaoLeads\\DTO\\ContatoDTOCadastrarEditar.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T18:27:05.63Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ConjugueDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\DTO\\ConjugueDTO.cs",
-              "RelativeDocumentMoniker": "ApiGestaoLeads\\DTO\\ConjugueDTO.cs",
-              "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\DTO\\ConjugueDTO.cs",
-              "RelativeToolTip": "ApiGestaoLeads\\DTO\\ConjugueDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T18:32:03.172Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TipoContatoRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Repositorio\\TipoContatoRepositorio.cs",
-              "RelativeDocumentMoniker": "ApiGestaoLeads\\Repositorio\\TipoContatoRepositorio.cs",
-              "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Repositorio\\TipoContatoRepositorio.cs",
-              "RelativeToolTip": "ApiGestaoLeads\\Repositorio\\TipoContatoRepositorio.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAnwCoAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T19:55:33.419Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ContatoRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Repositorio\\ContatoRepositorio.cs",
-              "RelativeDocumentMoniker": "ApiGestaoLeads\\Repositorio\\ContatoRepositorio.cs",
-              "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Repositorio\\ContatoRepositorio.cs",
-              "RelativeToolTip": "ApiGestaoLeads\\Repositorio\\ContatoRepositorio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T14:51:46.479Z",
+              "WhenOpened": "2025-01-03T19:03:47.967Z",
               "EditorCaption": ""
             },
             {
@@ -181,13 +145,14 @@
               "RelativeDocumentMoniker": "ApiGestaoLeads\\Repositorio\\LeadRepositorio.cs",
               "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Repositorio\\LeadRepositorio.cs",
               "RelativeToolTip": "ApiGestaoLeads\\Repositorio\\LeadRepositorio.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAlwEMAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAvwEoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T18:13:11.393Z"
+              "WhenOpened": "2024-12-16T18:13:11.393Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "Contato.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Model\\Contato.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\Model\\Contato.cs",
@@ -199,26 +164,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ContatoController.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Controllers\\ContatoController.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\Controllers\\ContatoController.cs",
               "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Controllers\\ContatoController.cs",
               "RelativeToolTip": "ApiGestaoLeads\\Controllers\\ContatoController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAIAwwDIAAABcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T14:51:13.854Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ContatoServico.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Servico\\ContatoServico.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\Servico\\ContatoServico.cs",
               "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Servico\\ContatoServico.cs",
               "RelativeToolTip": "ApiGestaoLeads\\Servico\\ContatoServico.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAnwLoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIcAAAAAAAAAAABAwNwAAAB3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T14:51:31.003Z",
               "EditorCaption": ""
@@ -226,18 +191,129 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "EnderecoRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Repositorio\\EnderecoRepositorio.cs",
+              "RelativeDocumentMoniker": "ApiGestaoLeads\\Repositorio\\EnderecoRepositorio.cs",
+              "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Repositorio\\EnderecoRepositorio.cs",
+              "RelativeToolTip": "ApiGestaoLeads\\Repositorio\\EnderecoRepositorio.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAqwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T20:16:40.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RespostaHttp.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Servico\\RespostaHttp.cs",
+              "RelativeDocumentMoniker": "ApiGestaoLeads\\Servico\\RespostaHttp.cs",
+              "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Servico\\RespostaHttp.cs",
+              "RelativeToolTip": "ApiGestaoLeads\\Servico\\RespostaHttp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T19:13:44.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ContatoRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Repositorio\\ContatoRepositorio.cs",
+              "RelativeDocumentMoniker": "ApiGestaoLeads\\Repositorio\\ContatoRepositorio.cs",
+              "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Repositorio\\ContatoRepositorio.cs",
+              "RelativeToolTip": "ApiGestaoLeads\\Repositorio\\ContatoRepositorio.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAIAwwHEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T14:51:46.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LeadsController.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Controllers\\LeadsController.cs",
+              "RelativeDocumentMoniker": "ApiGestaoLeads\\Controllers\\LeadsController.cs",
+              "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Controllers\\LeadsController.cs",
+              "RelativeToolTip": "ApiGestaoLeads\\Controllers\\LeadsController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA6wEsAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T20:23:12.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ContatoDTOCadastrarEditar.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\DTO\\ContatoDTOCadastrarEditar.cs",
+              "RelativeDocumentMoniker": "ApiGestaoLeads\\DTO\\ContatoDTOCadastrarEditar.cs",
+              "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\DTO\\ContatoDTOCadastrarEditar.cs",
+              "RelativeToolTip": "ApiGestaoLeads\\DTO\\ContatoDTOCadastrarEditar.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T18:27:05.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ValidaCpf.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Utils\\ValidaCpf.cs",
+              "RelativeDocumentMoniker": "ApiGestaoLeads\\Utils\\ValidaCpf.cs",
+              "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Utils\\ValidaCpf.cs",
+              "RelativeToolTip": "ApiGestaoLeads\\Utils\\ValidaCpf.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T19:06:34.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ValidaGenero.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Utils\\ValidaGenero.cs",
+              "RelativeDocumentMoniker": "ApiGestaoLeads\\Utils\\ValidaGenero.cs",
+              "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Utils\\ValidaGenero.cs",
+              "RelativeToolTip": "ApiGestaoLeads\\Utils\\ValidaGenero.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T19:10:21.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "LeadDTOCadastrarEditar.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\DTO\\LeadDTOCadastrarEditar.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\DTO\\LeadDTOCadastrarEditar.cs",
               "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\DTO\\LeadDTOCadastrarEditar.cs",
               "RelativeToolTip": "ApiGestaoLeads\\DTO\\LeadDTOCadastrarEditar.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAuwBMAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA7wCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T18:13:01.327Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
+              "Title": "TipoContatoRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Repositorio\\TipoContatoRepositorio.cs",
+              "RelativeDocumentMoniker": "ApiGestaoLeads\\Repositorio\\TipoContatoRepositorio.cs",
+              "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Repositorio\\TipoContatoRepositorio.cs",
+              "RelativeToolTip": "ApiGestaoLeads\\Repositorio\\TipoContatoRepositorio.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAnwCoAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T19:55:33.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ConjugueDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\DTO\\ConjugueDTO.cs",
+              "RelativeDocumentMoniker": "ApiGestaoLeads\\DTO\\ConjugueDTO.cs",
+              "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\DTO\\ConjugueDTO.cs",
+              "RelativeToolTip": "ApiGestaoLeads\\DTO\\ConjugueDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T18:32:03.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "ContatoDTO.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\DTO\\ContatoDTO.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\DTO\\ContatoDTO.cs",
@@ -249,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "Lead.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Model\\Lead.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\Model\\Lead.cs",
@@ -261,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "LeadDTO.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\DTO\\LeadDTO.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\DTO\\LeadDTO.cs",
@@ -273,31 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "LeadsController.cs",
-              "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Controllers\\LeadsController.cs",
-              "RelativeDocumentMoniker": "ApiGestaoLeads\\Controllers\\LeadsController.cs",
-              "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Controllers\\LeadsController.cs",
-              "RelativeToolTip": "ApiGestaoLeads\\Controllers\\LeadsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T20:23:12.009Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "EnderecoRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Repositorio\\EnderecoRepositorio.cs",
-              "RelativeDocumentMoniker": "ApiGestaoLeads\\Repositorio\\EnderecoRepositorio.cs",
-              "ToolTip": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Repositorio\\EnderecoRepositorio.cs",
-              "RelativeToolTip": "ApiGestaoLeads\\Repositorio\\EnderecoRepositorio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T20:16:40.812Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "20241226145855_MigrationAdicionarColunaComplementoTabelaEnderecos.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Migrations\\20241226145855_MigrationAdicionarColunaComplementoTabelaEnderecos.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\Migrations\\20241226145855_MigrationAdicionarColunaComplementoTabelaEnderecos.cs",
@@ -309,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "ConverterListaLeadsEmListaLeadsDTO.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Utils\\ConverterListaLeadsEmListaLeadsDTO.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\Utils\\ConverterListaLeadsEmListaLeadsDTO.cs",
@@ -321,7 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "TiposContatoController.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Controllers\\TiposContatoController.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\Controllers\\TiposContatoController.cs",
@@ -333,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "Endereco.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Model\\Endereco.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\Model\\Endereco.cs",
@@ -345,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "EnderecoDTO.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\DTO\\EnderecoDTO.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\DTO\\EnderecoDTO.cs",
@@ -357,7 +409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "IConverter.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Utils\\IConverter.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\Utils\\IConverter.cs",
@@ -369,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "ConversorListaTiposContatoParaListaTipoContatoDTO.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Utils\\ConversorListaTiposContatoParaListaTipoContatoDTO.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\Utils\\ConversorListaTiposContatoParaListaTipoContatoDTO.cs",
@@ -381,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "Conjugue.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Model\\Conjugue.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\Model\\Conjugue.cs",
@@ -393,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "TipoContatoServico.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel Rodrigues\\Desktop\\arquivos\\MEUS_PROJETOS\\api-gestao-leads\\ApiGestaoLeads\\ApiGestaoLeads\\Servico\\TipoContatoServico.cs",
               "RelativeDocumentMoniker": "ApiGestaoLeads\\Servico\\TipoContatoServico.cs",

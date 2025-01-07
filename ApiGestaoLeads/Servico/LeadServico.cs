@@ -3,6 +3,7 @@ using ApiGestaoLeads.DTO;
 using ApiGestaoLeads.Model;
 using ApiGestaoLeads.Repositorio;
 using ApiGestaoLeads.Utils;
+using System.Linq.Expressions;
 
 namespace ApiGestaoLeads.Servico
 {
@@ -109,6 +110,41 @@ namespace ApiGestaoLeads.Servico
                 if (leadDTOCadastrarEditar.TipoPessoa == "pf")
                 {
                     // cadastrar lead pessoa fisica
+                    // validar se o usuário informou o cpf do lead
+                    if (leadDTOCadastrarEditar.Cpf.Trim() == "")
+                    {
+
+                        return new RespostaHttp<LeadDTOCadastrarEditar>("Informe o cpf do lead!", false, null);
+                    }
+
+                    // validar o cpf do lead
+                    if (!ValidaCpf.ValidarCpf(leadDTOCadastrarEditar.Cpf))
+                    {
+
+                        return new RespostaHttp<LeadDTOCadastrarEditar>("Cpf inválido!", false, null);
+                    }
+
+                    // validar se o usuário informou a data de nascimento
+                    if (leadDTOCadastrarEditar.DataNascimento.Trim().Equals(""))
+                    {
+
+                        return new RespostaHttp<LeadDTOCadastrarEditar>("Informe a data de nascimento do lead!", false, null);
+                    }
+
+                    // validar se o usuário informou o genero
+                    if (leadDTOCadastrarEditar.Genero.Trim() == "")
+                    {
+
+                        return new RespostaHttp<LeadDTOCadastrarEditar>("Informe o gênero do lead!", false, null);
+                    }
+
+                    // validar o gênero informado
+                    if (!ValidaGenero.ValidarGenero(leadDTOCadastrarEditar.Genero.Trim()))
+                    {
+
+                        return new RespostaHttp<LeadDTOCadastrarEditar>("Gênero inválido!", false, null);
+                    }
+
                     // validar se já existe outra pf cadastrada com o mesmo cpf
                     if (this.ValidarSeJaExisteOutroLeadCadastradoMesmoCpf(leadDTOCadastrarEditar.Cpf).Result)
                     {
@@ -319,6 +355,42 @@ namespace ApiGestaoLeads.Servico
                     false,
                     null
                 );
+            }
+
+        }
+
+        public async Task<RespostaHttp<Boolean>> DeletarLead(int idLeadDeletar)
+        {
+            await this._leadRepositorio.GetContexto().Database.BeginTransactionAsync();
+
+            try
+            {
+                // validar se existe um lead cadastrado com o id informado
+                Lead lead = await this._leadRepositorio.BuscarLeadPeloId(idLeadDeletar);
+
+                if (lead is null)
+                {
+
+                    return new RespostaHttp<Boolean>("Não existe um lead cadastrado com esse id na base de dados!", false, false);
+                }
+
+                // deletar os endereços do lead
+                await this._enderecoRepositorio.DeletarEnderecosLead(idLeadDeletar);
+
+                // deletar os contatos do lead
+                await this._contatoRepositorio.DeletarContatosLead(idLeadDeletar);
+
+                await this._leadRepositorio.DeletarLead(idLeadDeletar);
+
+                await this._leadRepositorio.GetContexto().Database.CommitTransactionAsync();
+
+                return new RespostaHttp<bool>("Lead deletado com sucesso!", true, false);
+            }
+            catch (Exception e)
+            {
+                await this._leadRepositorio.GetContexto().Database.RollbackTransactionAsync();
+
+                return new RespostaHttp<Boolean>("Erro ao tentar-se deletar o lead!", false, false);
             }
 
         }

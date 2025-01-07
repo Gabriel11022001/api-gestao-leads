@@ -58,7 +58,9 @@ namespace ApiGestaoLeads.Repositorio
         public async Task<Contato> BuscarContatoPeloId(int idContato)
         {
 
-            return await this._contexto.Contatos.FindAsync(idContato);
+            return await this._contexto.Contatos
+                .Include(c => c.TipoContato)
+                .FirstOrDefaultAsync(c => c.Id == idContato);
         }
 
         public async Task<List<Contato>> FiltrarContatosPelaDescricao(String descricaoContato)
@@ -96,6 +98,18 @@ namespace ApiGestaoLeads.Repositorio
                 .Where(c => c.LeadId == idLead)
                 .Include(c => c.TipoContato)
                 .ToListAsync();
+        }
+
+        public async Task<Boolean> DeletarContatosLead(int idLead)
+        {
+            List<Contato> contatosLead = await this.BuscarContatosLead(idLead);
+
+            foreach (var contato in contatosLead)
+            {
+                await this.DeletarContato(contato.Id);
+            }
+
+            return true;
         }
 
     }

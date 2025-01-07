@@ -208,5 +208,39 @@ namespace ApiGestaoLeads.Servico
 
         }
 
+        public async Task<RespostaHttp<ContatoDTO>> BuscarContatoPeloId(int idContato)
+        {
+
+            try
+            {
+                var contato = await this._contatoRepositorio.BuscarContatoPeloId(idContato);
+
+                if (contato == null)
+                {
+
+                    return new RespostaHttp<ContatoDTO>("Não existe um contato cadastrado na base de dados com esse id!", false, null);
+                }
+
+                var contatoDTO = new ContatoDTO();
+                contatoDTO.Id = contato.Id;
+                contatoDTO.Descricao = contato.DescricaoContato;
+                contatoDTO.Ativo = contato.Ativo;
+
+                var tipoContatoDTO = new TipoContatoDTO();
+                tipoContatoDTO.Id = contato.TipoContatoId;
+                tipoContatoDTO.Descricao = contato.TipoContato.Descricao;
+                tipoContatoDTO.Ativo = contato.TipoContato.Ativo;
+                contatoDTO.TipoContatoDTO = tipoContatoDTO;
+
+                return new RespostaHttp<ContatoDTO>("Contato encontrado com sucesso!", true, contatoDTO);
+            }
+            catch (Exception e)
+            {
+
+                return new RespostaHttp<ContatoDTO>("Erro ao tentar-se buscar o contato pelo id!", false, null);
+            }
+
+        }
+
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiGestaoLeads")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41b755e4d5d35dc388521daa8a1cf5cd709ab15f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9666d5a4c8c96cecde02c01daa0d370aa8908390")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiGestaoLeads")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiGestaoLeads")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

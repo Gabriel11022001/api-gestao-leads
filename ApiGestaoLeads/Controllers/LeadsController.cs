@@ -69,5 +69,20 @@ namespace ApiGestaoLeads.Controllers
             return BadRequest(respostaConsultarLeadPeloId);
         }
 
+        // deletar o lead na base de dados
+        [ HttpDelete("{idLeadDeletar:int}") ]
+        public async Task<ActionResult<RespostaHttp<Boolean>>> DeletarLead(int idLeadDeletar)
+        {
+            RespostaHttp<Boolean> respostaDeletarLead = await this._leadServico.DeletarLead(idLeadDeletar);
+
+            if (respostaDeletarLead.Ok)
+            {
+
+                return Ok(respostaDeletarLead);
+            }
+
+            return BadRequest(respostaDeletarLead);
+        }
+
     }
 }
